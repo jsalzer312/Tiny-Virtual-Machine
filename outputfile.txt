@@ -1,0 +1,99 @@
+---------------------------------WITH VM UPDATES---------------------------------
+
+Would you like to see the state of the VM when executing the program? (y/n): y
+PC = 0 | A = 0 | DM = [0,0,0,0,0,0,0,0,0,0]
+
+IN <5>
+Input a value: 3
+PC = 2 | A = 3 | DM = [0,0,0,0,0,0,0,0,0,0]
+
+OUT <7>
+Result is: 3
+PC = 4 | A = 3 | DM = [0,0,0,0,0,0,0,0,0,0]
+
+SKIPG
+PC = 8 | A = 3 | DM = [0,0,0,0,0,0,0,0,0,0]
+
+STORE <0>
+PC = 10 | A = 3 | DM = [3,0,0,0,0,0,0,0,0,0]
+
+IN <5>
+Input a value: 2
+PC = 12 | A = 2 | DM = [3,0,0,0,0,0,0,0,0,0]
+
+OUT <7>
+Result is: 2
+PC = 14 | A = 2 | DM = [3,0,0,0,0,0,0,0,0,0]
+
+SKIPG
+PC = 18 | A = 2 | DM = [3,0,0,0,0,0,0,0,0,0]
+
+STORE <1>
+PC = 20 | A = 2 | DM = [3,2,0,0,0,0,0,0,0,0]
+
+LOAD <3>
+PC = 22 | A = 0 | DM = [3,2,0,0,0,0,0,0,0,0]
+
+ADD <0>
+PC = 24 | A = 3 | DM = [3,2,0,0,0,0,0,0,0,0]
+
+STORE <3>
+PC = 26 | A = 3 | DM = [3,2,0,3,0,0,0,0,0,0]
+
+LOAD <1>
+PC = 28 | A = 2 | DM = [3,2,0,3,0,0,0,0,0,0]
+
+SUB <10>
+PC = 30 | A = 1 | DM = [3,2,0,3,0,0,0,0,0,0]
+
+STORE <1>
+PC = 32 | A = 1 | DM = [3,1,0,3,0,0,0,0,0,0]
+
+SKIPZ
+PC = 34 | A = 1 | DM = [3,1,0,3,0,0,0,0,0,0]
+
+JUMP <20>
+PC = 20 | A = 1 | DM = [3,1,0,3,0,0,0,0,0,0]
+
+LOAD <3>
+PC = 22 | A = 3 | DM = [3,1,0,3,0,0,0,0,0,0]
+
+ADD <0>
+PC = 24 | A = 6 | DM = [3,1,0,3,0,0,0,0,0,0]
+
+STORE <3>
+PC = 26 | A = 6 | DM = [3,1,0,6,0,0,0,0,0,0]
+
+LOAD <1>
+PC = 28 | A = 1 | DM = [3,1,0,6,0,0,0,0,0,0]
+
+SUB <10>
+PC = 30 | A = 0 | DM = [3,1,0,6,0,0,0,0,0,0]
+
+STORE <1>
+PC = 32 | A = 0 | DM = [3,0,0,6,0,0,0,0,0,0]
+
+SKIPZ
+PC = 36 | A = 0 | DM = [3,0,0,6,0,0,0,0,0,0]
+
+LOAD <3>
+PC = 38 | A = 6 | DM = [3,0,0,6,0,0,0,0,0,0]
+
+OUT <7>
+Result is: 6
+PC = 40 | A = 6 | DM = [3,0,0,6,0,0,0,0,0,0]
+
+End of Program!
+PC = 40 | A = 6 | DM = [3,0,0,6,0,0,0,0,0,0]
+
+
+---------------------------------WITHOUT VM UPDATES---------------------------------
+
+Would you like to see the state of the VM when executing the program? (y/n): n
+Input a value: 3
+Result is: 3
+Input a value: 2
+Result is: 2
+Result is: 6
+End of Program!
+PC = 40 | A = 6 | DM = [3,0,0,6,0,0,0,0,0,0]
